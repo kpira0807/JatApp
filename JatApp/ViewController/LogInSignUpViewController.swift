@@ -140,30 +140,31 @@ class LogInSignUpViewController: UIViewController, UITextFieldDelegate {
         let userEmail = emailTextField.text ?? ""
         let userPassword = passwordTextField.text ?? ""
         let userConfirmPassword = passwordRepeatTextField.text ?? ""
-        
-        if (userName.isEmpty && userPassword.isEmpty && userConfirmPassword.isEmpty) {
-            alertMessage(message: ErrorMessege.emptyFields.rawValue)
-        }
-        if (userPassword.isEmpty && userConfirmPassword.isEmpty) {
-            alertMessage(message: ErrorMessege.setPassword.rawValue)
-        }
-        if (!userName.isEmpty && userName.count < LocalConstant.minNameLength) {
-            alertMessage(message: ErrorMessege.moreName.rawValue)
-        }
-        if (!userPassword.isEmpty && userPassword.count < LocalConstant.minPasswordLength) {
-            alertMessage(message: ErrorMessege.morePassword.rawValue)
-        }
-        if (!userPassword.isEmpty && userConfirmPassword.isEmpty) {
-            alertMessage(message: ErrorMessege.confirmPassword.rawValue)
-        }
-        if (userPassword != userConfirmPassword ) {
-            alertMessage(message: ErrorMessege.notMatch.rawValue)
-        }
-        
+                
         createButton.isEnabled = false
         viewIndicator.startActivity()
         
         if switchButton.selectedSegmentIndex == 0 {
+            
+            if (userName.isEmpty && userPassword.isEmpty && userConfirmPassword.isEmpty) {
+                alertMessage(message: ErrorMessege.emptyFields.rawValue)
+            }
+            if (userPassword.isEmpty && userConfirmPassword.isEmpty) {
+                alertMessage(message: ErrorMessege.setPassword.rawValue)
+            }
+            if (!userName.isEmpty && userName.count < LocalConstant.minNameLength) {
+                alertMessage(message: ErrorMessege.moreName.rawValue)
+            }
+            if (!userPassword.isEmpty && userPassword.count < LocalConstant.minPasswordLength) {
+                alertMessage(message: ErrorMessege.morePassword.rawValue)
+            }
+            if (!userPassword.isEmpty && userConfirmPassword.isEmpty) {
+                alertMessage(message: ErrorMessege.confirmPassword.rawValue)
+            }
+            if (userPassword != userConfirmPassword ) {
+                alertMessage(message: ErrorMessege.notMatch.rawValue)
+            }
+            
             createNewAccount(userName, userEmail, userPassword)
         } else if switchButton.selectedSegmentIndex == 1 {
             loginToAccount(userEmail, userPassword)
