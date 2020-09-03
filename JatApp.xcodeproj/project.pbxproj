@@ -30,6 +30,7 @@
 		1288E5C724E720980074E5B3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288E5C624E720980074E5B3 /* CustomTextField.swift */; };
 		1288E5C924E725630074E5B3 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288E5C824E725630074E5B3 /* LoaderView.swift */; };
 		1290040624E84345009902AB /* DataStorege.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1290040524E84345009902AB /* DataStorege.swift */; };
+		1290040E24F3D12C009902AB /* AutentificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1290040D24F3D12C009902AB /* AutentificationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		1288E5C624E720980074E5B3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		1288E5C824E725630074E5B3 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		1290040524E84345009902AB /* DataStorege.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorege.swift; sourceTree = "<group>"; };
+		1290040D24F3D12C009902AB /* AutentificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutentificationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				1288E5C624E720980074E5B3 /* CustomTextField.swift */,
 				1288E5C824E725630074E5B3 /* LoaderView.swift */,
 				1290040524E84345009902AB /* DataStorege.swift */,
+				1290040D24F3D12C009902AB /* AutentificationViewModel.swift */,
 			);
 			path = JatApp;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				1288E5C724E720980074E5B3 /* CustomTextField.swift in Sources */,
 				1290040624E84345009902AB /* DataStorege.swift in Sources */,
 				1288E5A324E517E30074E5B3 /* TextResults.swift in Sources */,
+				1290040E24F3D12C009902AB /* AutentificationViewModel.swift in Sources */,
 				1288E5A524E519290074E5B3 /* ResultsTableViewController.swift in Sources */,
 				1288E5B124E53DFF0074E5B3 /* LogInSignUpViewController.swift in Sources */,
 				1288E59F24E3E0030074E5B3 /* LogInAccount.swift in Sources */,
