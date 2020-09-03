@@ -11,8 +11,8 @@ import UIKit
 
 class AutentificationViewModel {
     
-    var logIn = LoginAccount()
-    var signIn = CreateAccount()
+    private var logIn = LoginAccount()
+    private var signIn = CreateAccount()
 
     func loginToAccount(_ email: String, _ password: String) {
             logIn.logIn(email: email, password: password, completionHandler: { (response, error) in
@@ -30,12 +30,9 @@ class AutentificationViewModel {
             })
         }
 
-    func checkResponse(error: Error?, response : LoginSignupModel?) {
-       //     viewIndicator.startActivity()
+    private func checkResponse(error: Error?, response : LoginSignupModel?) {
             if let error = error {
                 print(error)
-         //       self.createButton.isEnabled = true
-          //      viewIndicator.stopActivity()
                 self.alertMessage(message: ErrorMessege.error.rawValue)
                 return
             }
@@ -43,13 +40,9 @@ class AutentificationViewModel {
             if let respon = response {
                 if respon.success {
                     DataStorege.shared.token = response?.data.access_token
-           //         self.performSegue(withIdentifier: "results", sender: self)
                 } else {
-               //     self.createButton.isEnabled = true
-               //     viewIndicator.stopActivity()
                     for message in respon.errors {
                         if let message = message.message {
-                      //      viewIndicator.stopActivity()
                             alertMessage(message: message)
                         }
                     }
@@ -62,6 +55,5 @@ class AutentificationViewModel {
         let action = UIAlertAction(title: "OK", style: .default , handler: nil)
         
         alertController.addAction(action)
-       // self.present(alertController, animated: true, completion: nil)
     }
 }
